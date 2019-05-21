@@ -1,11 +1,13 @@
 @extends('Mahasiswa.layout')
 
 @section('title')
-    Data Mahasiswa
+    Mahasiswa
 @endsection
 
 @section('content')
-
+    <a href="{{ url('tambah_mahasiswa') }}" class="btn btn-success btn-sm">
+        Tambah Mahasiswa
+    </a>
     <table class="table">
         <thead>
         <tr>

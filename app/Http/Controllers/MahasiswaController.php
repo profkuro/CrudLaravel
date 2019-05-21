@@ -15,4 +15,15 @@ class MahasiswaController extends Controller
 //		dd($data);
 		return view('Mahasiswa.index', compact('var', 'data'));
 	}
+
+	public function create(){
+		return view('Mahasiswa.tambah');
+	}
+
+	public function store(Request $mahasiswa){
+		$mhs = $mahasiswa->all();
+		print_r($mhs);
+		// create::Mahasiswa($mahasiswa->all());
+		// return redirect('mahasiswa');
+	}
 }
