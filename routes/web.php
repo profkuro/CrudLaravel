@@ -19,3 +19,6 @@ Route::get('/mhs', function(){
 
 Route::get('mahasiswa', 'MahasiswaController@index')
     ->name('mahasiswa.index');
+
+Route::get('tambah_mahasiswa', 'MahasiswaController@create');
+Route::resource('mahasiswa', 'MahasiswaController');
