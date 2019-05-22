@@ -21,9 +21,19 @@ class MahasiswaController extends Controller
 	}
 
 	public function store(Request $mahasiswa){
+		Mahasiswa::create($mahasiswa->all());
+		return redirect('mahasiswa');
+	}
+
+	public function edit($id){
+				//select * from mahasiswa where id=$id
+		$mhs = Mahasiswa::find($id);
+		return view('Mahasiswa.ubah', compact('mhs'));
+	}
+
+	public function update(Request $mahasiswa, $id){
 		$mhs = $mahasiswa->all();
-		print_r($mhs);
-		// create::Mahasiswa($mahasiswa->all());
-		// return redirect('mahasiswa');
+		Mahasiswa::find($id)->update($mhs);
+		return redirect('mahasiswa');
 	}
 }
