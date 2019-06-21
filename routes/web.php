@@ -17,8 +17,6 @@ use App\Mahasiswa;
 //     return Mahasiswa::all();
 // });
 
-// Route::get('mahasiswa', 'MahasiswaController@index')
-//     ->name('mahasiswa.index');
 
 // Route::get('', 'MahasiswaController@create');
 Route::resource('mahasiswa', 'MahasiswaController');
